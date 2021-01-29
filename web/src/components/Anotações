@@ -1,0 +1,35 @@
+Arquivo Todolist.tsx
+
+{ todos?.map(
+        todo => (<div key={}>{todo.title}</div>)) 
+}
+A função map é usada para percorrer todos itens. Todo mapeamento exige um atributo chave chamado key que é um identificador único.
+
+
+Arquivo TodoListItem.tsx
+
+
+O uk-width-expand e uk-width-auto são propriedades uk-width. O uk-width-expand vai pegar o total, o máximo que ele conseguir e uk-width-auto ele vai pegar o que sobrar
+
+Arquivo TodoContextType.tsx
+
+todos: Todos[] é uma lista de Todos
+
+addTodo(title: string): void -> Retornar void, não retorna nada.
+
+Arquivo Todolist.tsx
+
+const {todos} = useContext<TodoContextType>(TodoContext);
+
+{todos} o objeto está sendo descontruído pq o useContext está trazendo n informações e o retorno dele é o objeto e dentro desse objeto temos a lista de todos.
+
+
+Arquivo TodoContext.tsx
+
+O comando setTodos([...todos, todo]); substitui os seguintes comandos:
+
+let todos = todos;
+todos.push(todo);
+setTodos(todos);
+
+
